@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+textarea {
+    resize: none;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #d6d8db;
+    overflow-x: auto;
+}
+.output-wrapper {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+.file-header {
+    display: flex;
+    justify-content: start;
+    gap: 1px;
+}
+.file-item {
+    width: 50px;
+    height: 20px;
+    background-color: #222;
+}
+.file-header-wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.cen-containter {
+    display: flex;
+    justify-content: center;
+}
+.file-item {
+    text-align: center;
+    font-size: small;
+    color: white;
+    width: fit-content;
+    padding: 0 5px;
+}
+.file-item:hover, .add-button:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+.add-button {
+    width: 30px;
+    height: 20px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-button:hover {
+    cursor: pointer;
+}
+.add-button p {
+    text-align: center;
+    color: white;
+}
+.add-button, .file-item {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+/* 
+canvas code editor
+*/
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#code {
+    width: auto;
+    height: 500px;
+    font-size: 11px;
+    font-family: monospace;
+    line-height: 15px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    resize: both;
+    color: #ffa;
+    border: 0;
+    background-color: #222;
+    white-space: pre;
+    overflow: auto;
+  }
+  
+  
+  /* supported only in opera */
+  #code {
+    scrollbar-arrow-color: #ee8;
+    scrollbar-base-color: #444;
+    scrollbar-track-color: #666;
+    scrollbar-face-color: #444;
+    /* outer light */
+    scrollbar-3dlight-color: #444;
+    /* inner light */
+    scrollbar-highlight-color: #666;
+    /* outer dark */
+    scrollbar-darkshadow-color: #444;
+    /* inner dark */
+    scrollbar-shadow-color: #222;
+  }
+  
+  
+  /* chrome scrollbars */
+  
+  textarea::-webkit-scrollbar {
+    width: 16px;
+    background-color: #444;
+    cursor: pointer;
+  }
+  
+  textarea::-webkit-scrollbar-track {
+    background-color: #333;
+    cursor: pointer;
+  }
+  
+  textarea::-webkit-scrollbar-corner {
+    background-color: #484;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  }
+  
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #444;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+  }
+  

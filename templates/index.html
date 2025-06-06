@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code IDE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+    <body>
+        <h1 style="text-align: center;">Choose programming language:</h1>
+        <div class="select-container">
+            <select name="" id="select-item">
+                <option value="java">Java</option>
+                <option value="own">Own programming language</option>
+            </select>
+            <form method="post" name="codeForm">        
+                <button onclick="sendFormForIDE()">Start coding!</button>
+            </form>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code IDE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 style="text-align: center;">Online Code IDE</h1>
+    <div class="cen-containter">
+    <div class="file-header-wrapper">
+        <div class="file-header" >
+            <div class="file-item" onkeypress="trackContentOfFiles(this)">Main.java</div>
+            <div class="add-button">
+                <p>+</p>
+            </div>
+        </div>
+    <div id="wrapper">
+        <textarea id="code" cols="120" rows="10" name="anotherName" required ></textarea>
+      </div>
+    </div>
+</div>
+      <div style="display: flex; justify-content: center;">
+        <form action="{{ url_for('compile_code') }}" method="post" name="codeForm">        
+            <button onclick="sendFormForJava()">Compile</button>
+        </form>
+    </div>
+    {% if runtime_output %}
+    <div class="output-wrapper">
+    <h2>Runtime Output:</h2>
+    <pre>{{ runtime_output }}</pre>
+    </div>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='js/canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/file-header.js') }}"></script>
+</body>
+</html>
