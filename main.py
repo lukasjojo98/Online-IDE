@@ -32,3 +32,6 @@ def compile_code():
     
     elif language == "Own":
         return render_template('own.html', runtime_output='none')
+
+if __name__=="__main__":
+    app.run(host="0.0.0.0", port="5050")
